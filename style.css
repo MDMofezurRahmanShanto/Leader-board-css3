@@ -59,7 +59,7 @@ hr{
 .blogs{
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    grid-row-gap: ;
+    grid-row-gap: 26px;
 }
 .blog{
     display: flex;
@@ -84,6 +84,11 @@ hr{
 }
 
 /* Courses style */
+.courses{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 24px;
+}
 
 .course .course-banner img{
     width: 224px;
@@ -108,3 +113,34 @@ hr{
 }
 
 
+/* Media Query */
+
+/* Mobiles */
+@media only screen and (max-width:688px){
+    .container{ 
+        width: 100%;
+
+    }
+    .players, .blogs, .courses{ 
+        background-color: red;
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+    .player{
+        flex-direction: column;
+    }
+    
+}
+
+/* Tablet */
+
+@media only screen and (min-width: 689px) and (max-width:991px) {
+    .container{
+        width: 100%;
+    }
+    .players, .blogs, .courses{
+        
+        background-color: seagreen;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
